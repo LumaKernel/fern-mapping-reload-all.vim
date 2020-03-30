@@ -1,0 +1,27 @@
+*fern-mapping-reload-all.txt*		fern.vim plugin to reload from all
+
+Author : Luma <tomorinao.info@gmail.com>
+License: Unlicense <https://unlicense.org>
+
+==============================================================================
+CONTENTS				*fern-mapping-reload-all-contents*
+
+Example				|fern-mapping-reload-all-example|
+
+==============================================================================
+EXAMPLE				*fern-mapping-reload-all-example*
+
+*fern-mapping-reload-all* is not providing default mappings.
+Please set by yourself. You can also use this as the action `reload:all`.
+>
+	function s:init_fern_mapping_reload_all()
+	    nmap <buffer> R <Plug>(fern-action-reload-all)
+	endfunction
+	augroup my-fern-mapping-reload-all
+	    autocmd! *
+	    autocmd FileType fern call s:init_fern_mapping_reload_all()
+	augroup END
+<
+
+==============================================================================
+vim:tw=78:ts=8:noet:ft=help:norl
